@@ -109,6 +109,7 @@ The response data field is a mapping of called target entities, each containing 
 | `wind_bearing` | The wind bearing in azimuth angle (degrees) or 1-3 letter cardinal direction. | 268
 | `wind_gust_speed` | The wind gust speed in the unit indicated by the `wind_speed_unit` state attribute. | 34.41
 | `wind_speed` | The wind speed in the unit indicated by the `wind_speed_unit` state attribute. | 24.41
+| `extra_attributes` | Extra attributes that may be returned from the integration. | {"chance_of_thunder": 30}
 
 
 ## Examples
@@ -158,6 +159,8 @@ weather.tomorrow_io_home_nowcast:
       wind_speed: 16.88
       precipitation: 0
       humidity: 86
+      extra_attributes:
+        - chance_of_thunder: 20
     - datetime: "2023-12-07T14:00:00+00:00"
       condition: cloudy
       precipitation_probability: 0
@@ -167,6 +170,8 @@ weather.tomorrow_io_home_nowcast:
       wind_speed: 17.82
       precipitation: 0
       humidity: 77
+      extra_attributes:
+        - chance_of_thunder: 30
     - datetime: "2023-12-07T15:00:00+00:00"
       condition: cloudy
       precipitation_probability: 0
@@ -176,6 +181,8 @@ weather.tomorrow_io_home_nowcast:
       wind_speed: 17.89
       precipitation: 0
       humidity: 77
+      extra_attributes:
+        - chance_of_thunder: 20
 weather.toronto_forecast:
   forecast:
     - datetime: "2023-12-07T14:00:00+00:00"
